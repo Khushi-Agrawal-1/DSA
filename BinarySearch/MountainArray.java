@@ -3,7 +3,7 @@ package com.company.BinartSearch;
 
 public class MountainArray {
     public static void main(String[] args) {
-        int[] arr = {1,44,30,21,11,3};
+        int[] arr = {1, 44, 30, 21, 11, 3};
         System.out.println(peak(arr));
     }
 
@@ -14,13 +14,13 @@ public class MountainArray {
         while (start < end) {
             int mid = start + (end - start) / 2;
 
-            if(arr[mid]>arr[mid+1]){
+            if (arr[mid] > arr[mid + 1]) {
                 // second half is desc part
                 //possibility that mid is the largest value
                 end = mid;
-            }else if (arr[mid]<arr[mid+1]){
+            } else if (arr[mid] < arr[mid + 1]) {
                 // means we r in asc part
-                start = mid+1;
+                start = mid + 1;
             }
 
             // we dont need anything for arr[mid] == arr[mid+1] because in ques we are given
@@ -30,7 +30,7 @@ public class MountainArray {
         }
         return start;
     }
-
+}
     // everything was ok except - when we have array like [ 1,44,30,21,11,3]
 //    private static int peak(int[] arr) {
 //        int start=0;
@@ -53,4 +53,3 @@ public class MountainArray {
 //        }
 //        return start;
 //    }
-}
