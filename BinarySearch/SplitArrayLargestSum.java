@@ -30,15 +30,16 @@ public class SplitArrayLargestSum {
         int sum =0;
         int pieces =1;
 
-        for(int n:nums){
+        for(int n:nums) {
 
-            if(sum+n>mid){
+            if (sum + n > mid) {
                 // means adding this elemnet we will exceed the max limit of sum we set so we have to start a new piece or subarray
                 sum = n; // cause start sum of that new subarray will be the no itself
                 pieces++;
-            }else{
-                sum+=n;
+            } else {
+                sum += n;
             }
+        }
 
             if(pieces<=m){
                 end= mid;
@@ -46,7 +47,7 @@ public class SplitArrayLargestSum {
                 start=mid+1;
             }
 
-        }
+
     }
 
         return start; // here end == start
