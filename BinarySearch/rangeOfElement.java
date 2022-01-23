@@ -23,7 +23,7 @@ public class rangeOfElement {
         return arr;
     }
 
-    //// approach --> 2
+    // approach --> 2
     private static int search(int[] nums, int target, boolean isFirst) {
         int x =-1;
         int start=0;
